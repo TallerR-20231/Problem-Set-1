@@ -16,7 +16,10 @@ p_load(dplyr,
        tidyr,
        tibble,
        data.table,
-       tidyverse) 
+       tidyverse,
+       rio,
+       skimr,
+       janitor) 
 
 
 #1. Vectores
