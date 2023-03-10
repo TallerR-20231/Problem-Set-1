@@ -28,3 +28,5 @@ bool_impar <- num_uno_cien%%2!=0
 num_impares <- num_uno_cien[bool_impar]
 bool_par <- !(num_uno_cien %in% num_impares)
 num_pares <- num_uno_cien[bool_par]
+
+#2. 
