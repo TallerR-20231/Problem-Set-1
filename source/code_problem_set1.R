@@ -50,4 +50,10 @@ mi$bussiness_type <- ifelse(mi$GRUPOS4 == "01", "Agricultura", ifelse(mi$GRUPOS4
 ms$local <- ifelse(ms$P3053 == 6 | ms$P3053 == 7, 1, NA)
   
 #4. Eliminar filas columnas de un conjunto de datos
+mi <- subset(mi, mi$GRUPOS4 == "02")
+
+#Seleccionar variables de objeto ubicación:
+ms <- select(ms, c(1,2,3, 9, 11, 13, 15))
+
+mi <- select(mi, c(1,2,3, 7, 8, 11, 12, 13, 14, 15))
 
