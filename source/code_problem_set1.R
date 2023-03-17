@@ -41,3 +41,13 @@ ms <- import('input/Módulo de sitio o ubicación.dta')
 #2.2. Exportar:
 export(mi, "output/Modulo_identificación.rds")
 export(ms, "output/Modulo_ubicación.rds")
+
+#3. Generar variables
+##Variable sobre identificación:
+mi$bussiness_type <- ifelse(mi$GRUPOS4 == "01", "Agricultura", ifelse(mi$GRUPOS4 == "02", "Industria_Manufacturera",ifelse(mi$GRUPOS4 == "03", "Comercio", ifelse(mi$GRUPOS4 == "04", "Servicios", NA))))
+
+## Variable sobre ubicación
+ms$local <- ifelse(ms$P3053 == 6 | ms$P3053 == 7, 1, NA)
+  
+#4. Eliminar filas columnas de un conjunto de datos
+
