@@ -57,3 +57,15 @@ ms <- select(ms, c(1,2,3, 9, 11, 13, 15))
 
 mi <- select(mi, c(1,2,3, 7, 8, 11, 12, 13, 14, 15))
 
+#5. Juntar ambas bases de datos:
+total <- inner_join(mi, ms, by=c("DIRECTORIO", "SECUENCIA_P", "SECUENCIA_ENCUESTA"))
+
+#6. Descriptivas conjunto de datos:
+
+#Distribución de la recuencia de la edad de las personas:
+hist(total[,5])
+
+
+
+
+
