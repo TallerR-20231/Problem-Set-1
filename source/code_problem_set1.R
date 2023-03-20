@@ -111,3 +111,18 @@ bd_total %>%
                values_to = "value")
 
 #Graficas:
+
+#a. Histograma de la edad
+ggplot(bd_total, aes(x=P241)) + geom_histogram(color="Black", fill="Grey") + 
+  labs(x="Edad", y="Frecuencia", title = "Histograma de la edad de los propietarios",
+       caption = "FUENTE: Elaboración propia con datos del DANE") 
+
+#b. Dispersión edad, numero de trabajadores remunerados
+graf_dispersion <- ggplot(bd_total, aes(x=P241, y = P3034)) + 
+  geom_point(color="Black", fill="Grey") +
+  labs(x="Edad", y="Meses Trabajados", title = "Histograma de los meses del negocio según la edad del propietario",
+       caption = "FUENTE: Elaboración propia con datos del DANE")+
+  geom_smooth(method=lm, se=FALSE, fullrange=TRUE)+
+  theme_classic()
+graf_dispersion
+  
